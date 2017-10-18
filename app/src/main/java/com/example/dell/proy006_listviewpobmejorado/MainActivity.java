@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         listaDatos=(ListView)findViewById(R.id.lstDatos);
         lista=new ArrayList<>();
 
+
         lista.add(new Datos(1, "Madrid", "3165541", "Madrid, el motor de España", R.drawable.madrid, R.drawable.madridmapa));
         lista.add(new Datos(2, "Mostoles", "3165541", "Madrid, el motor de España", R.drawable.mostoles, R.drawable.mostolesmapa));
         lista.add(new Datos(3, "Alcalá de Henares", "3165541", "Madrid, el motor de España", R.drawable.alcala, R.drawable.alcalamapa));
