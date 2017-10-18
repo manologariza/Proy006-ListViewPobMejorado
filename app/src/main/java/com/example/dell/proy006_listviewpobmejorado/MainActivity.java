@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listaDatos=(ListView)findViewById(R.id.lstDatos);
-        lista=new ArrayList<Datos>();
+        lista=new ArrayList<>();
 
         lista.add(new Datos(1, "Madrid", "3165541", "Madrid, el motor de España", R.drawable.madrid, R.drawable.madridmapa));
         lista.add(new Datos(2, "Mostoles", "3165541", "Madrid, el motor de España", R.drawable.mostoles, R.drawable.mostolesmapa));
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         lista.add(new Datos(19, "Aranjuez", "3165541", "Madrid, el motor de España", R.drawable.aranjuez, R.drawable.aranjuezmapa));
         lista.add(new Datos(20, "Arganda del Rey", "3165541", "Madrid, el motor de España", R.drawable.arganda, R.drawable.argandamapa));
 
+
         Adaptador miAdaptador=new Adaptador(getApplicationContext(), lista);
 
         listaDatos.setAdapter(miAdaptador);
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 Datos obj = (Datos) adapterView.getItemAtPosition(i);
 
                 Intent paso = new Intent(getApplicationContext(), DetalleActivity.class);
-                paso.putExtra("objeto", (Serializable)obj);
+                paso.putExtra("objeto", obj);
                 startActivity(paso);
             }
         });
